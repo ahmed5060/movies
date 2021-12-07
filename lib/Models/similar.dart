@@ -73,7 +73,7 @@ class Results {
   int? id;
   String? title;
   String? originalLanguage;
-  String? originalTitle;
+  var originalTitle;
   String? overview;
   double? popularity;
   String? posterPath;
