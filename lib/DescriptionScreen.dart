@@ -46,7 +46,11 @@ class _DescriptionScreenState extends State<DescriptionScreen> {
       backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.black87,
-        title: Text(original_title),
+        title: ConditionalBuilder(
+          condition: original_title == null,
+          fallback: (context) => Text(""),
+          builder: (context) => Text(original_title),
+        ),
       ),
       body: SingleChildScrollView(
         child: ConditionalBuilder(
